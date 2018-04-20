@@ -1,0 +1,13 @@
+{
+    "name": "desktop-concept-test",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "electron": "1.8.4",
+        "request": "2.85.0",
+        "ps-node": "0.1.6"
+    }
+}
