@@ -4,23 +4,31 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/tiles.css">
+	<link rel="stylesheet" href="../node_modules/dragula/dist/dragula.min.css">
 	<title>Hello, world!</title>
-	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-	<script src="js/jquery.js"></script>
-	<script src="js/time.js"
-	<script src="js/index.js"></script>
-	<script>if (window.module) module = window.module;</script>
+	<script src="https://cdn.ravenjs.com/3.24.2/raven.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		$(document).ready(()=>startEverything())
+		Raven.config('https://09c1c3b8110d4e6f8b4253e2d6f8fe54@sentry.io/1193434').install()
+		var main = require("./js/index.js");
+		document.addEventListener("DOMContentLoaded", function(event) {
+			try {
+				main();
+			} catch (e){
+				Raven.captureException(e);
+				console.error(e);
+			}
+		});
 	</script>
 </head>
 <body>
-	<div class="footer table">
+	<div id="tiles"></div>
+	<div class="ffooter table">
 		<div class="home" id="home">
 			<img src="img/home.png">
 		</div>
-		<td class="tiles">
-			<tr class="tilerow">
+		<td class="ftiles">
+			<tr class="ftilerow">
 				<div>
 					Example Tile
 				</div>

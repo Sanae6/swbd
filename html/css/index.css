@@ -1,4 +1,4 @@
-.footer {
+.ffooter {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -7,7 +7,6 @@
     text-align: center;
     display: table;
 }
-
 .table{
     display: table-row;
 }
@@ -17,7 +16,7 @@
     border-right: 3px solid gray;
     white-space: nowrap;
 }
-.tilerow{
+.ftilerow{
     white-space: nowrap;
     border-left: 3px solid gray;
     border-right: 3px solid gray;
@@ -33,4 +32,7 @@
 img {
     max-width: 50%;
     max-height: 50%;
+}
+.hidden{
+    display:none;
 }
